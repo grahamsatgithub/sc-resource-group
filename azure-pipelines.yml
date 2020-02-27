@@ -1,1 +1,6 @@
+pool:
+  vmImage: 'ubuntu-latest'
 
+steps:
+- script: date
+- script: ./pipeline.sh container.conf
