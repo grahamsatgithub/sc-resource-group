@@ -11,10 +11,10 @@ echo "container=$container"
 echo "hostmount=$hostmount"
 echo "hostshare=$hostshare"
 
-[[ -z "$configuration" ]] && exit
-[[ -z "$entrypoint" ]] && exit
-[[ -z "$container" ]] && exit
-[[ -z "$hostmount" ]] && exit
+[[ -z "$configuration" ]] && exit 1
+[[ -z "$entrypoint" ]] && exit 1
+[[ -z "$container" ]] && exit 1
+[[ -z "$hostmount" ]] && exit 1
 [[ -z "$hostshare" ]] && exit 1
 
 cifsconfig="/etc/smbcredentials"
